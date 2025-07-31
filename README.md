@@ -1,4 +1,4 @@
-# Recipe Book App
+# Recipe App
 
 A simple React app to create, edit/update, delete, search, and rate your favorite recipes.\
 Recipes are organized by category (Breakfast, Lunch/Dinner, Dessert), can have images, and are saved in your browser’s local storage.
@@ -9,7 +9,7 @@ Recipes are organized by category (Breakfast, Lunch/Dinner, Dessert), can have i
 
 ## Features
 
-- Add, edit, and delete recipes
+- Add, edit, and delete recipes (for delete you need confirmation)
 - Add a photo (image is saved locally)
 - Assign recipes to categories
 - Search recipes by keyword (title, ingredient, instruction)
@@ -34,13 +34,14 @@ Recipes are organized by category (Breakfast, Lunch/Dinner, Dessert), can have i
 ---
 
 ## Required Libraries
+Install the following with `npm install` ....
 
 - [react](https://react.dev/)
 - [react-dom](https://react.dev/)
 - [react-router-dom](https://reactrouter.com/)
 - [react-icons](https://react-icons.github.io/react-icons/)
 
-All are installed via `npm install` above.
+
 
 ---
 

@@ -20,11 +20,19 @@ function App() {
     }, [recipes]);
 
     const addRecipe = (recipe) => setRecipes([...recipes, recipe]);
+
     const updateRecipe = (updated) => {
         setRecipes(recipes.map(r => r.id === updated.id ? updated : r));
         setEditingRecipe(null);
     };
     const deleteRecipe = (id) => setRecipes(recipes.filter(r => r.id !== id));
+
+    // This is the important part: star ratings are saved here
+    const rateRecipe = (id, rating) => {
+        setRecipes(recipes =>
+            recipes.map(r => r.id === id ? { ...r, rating } : r)
+        );
+    };
 
     return (
         <Router>
@@ -37,6 +45,7 @@ function App() {
                         recipes={recipes}
                         onDelete={deleteRecipe}
                         onEdit={setEditingRecipe}
+                        onRate={rateRecipe}
                     />
                 } />
                 <Route path="/addrecipe" element={
